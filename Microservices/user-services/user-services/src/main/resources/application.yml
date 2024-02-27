@@ -1,0 +1,22 @@
+server:
+  port: 8082
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: USER-SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3306/user_services_data
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+

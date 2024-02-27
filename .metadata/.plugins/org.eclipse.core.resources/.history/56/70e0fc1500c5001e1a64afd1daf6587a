@@ -1,0 +1,23 @@
+package com.gdv.user.services.exceptions;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import com.gdv.user.services.utils.ApiResponse;
+
+@RestControllerAdvice
+public class GlobalExceptionHandler {
+	
+	public ResponseEntity<ApiResponse> handleDataNotFoundException(DataNotFoundException dataNotFoundException) {
+		return new ResponseEntity<>(
+				ApiResponse.builder().message(dataNotFoundException.getMessage()).build()
+				, HttpStatus.NOT_FOUND);
+	}
+	
+	public ResponseEntity<ApiResponse> handleDataAlreadyExistsException(DataAlreadyExistsException alreadyExistsException) {
+		return new ResponseEntity<>(
+				ApiResponse.builder().message(alreadyExistsException.getMessage()).build()
+				, HttpStatus.ALREADY_REPORTED);
+	}
+}

@@ -1,0 +1,5 @@
+package com.restapidemo.repositories;
+
+public interface EmployeeFamilyRepo {
+
+}

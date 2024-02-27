@@ -1,0 +1,16 @@
+package com.tokenExample.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+
+@Configuration
+public class AppConfig {
+	
+	public UserDetailsService userDetailsService() {
+		UserDetails userDetails = User.builder().username("gopal").password("123").build();
+		return new InMemoryUserDetailsManager(userDetails);
+	}
+}

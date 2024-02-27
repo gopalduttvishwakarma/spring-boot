@@ -1,0 +1,13 @@
+package com.gdv.user.services.entities;
+
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
+public class Ratings {
+	private int ratingId;
+	private int userId;
+	private int hotelId;
+	private int stars;
+}

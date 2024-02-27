@@ -1,0 +1,44 @@
+package com.restapidemo.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="employee_family")
+public class EmployeeFamily {
+	
+	@Id
+	private int employeeFamilyId; 
+	private String relation;
+	private String memberName;
+	private int employeeId;
+	
+	public int getEmployeeFamilyId() {
+		return employeeFamilyId;
+	}
+	public void setEmployeeFamilyId(int employeeFamilyId) {
+		this.employeeFamilyId = employeeFamilyId;
+	}
+	public String getRelation() {
+		return relation;
+	}
+	public void setRelation(String relation) {
+		this.relation = relation;
+	}
+	public String getMemberName() {
+		return memberName;
+	}
+	public void setMemberName(String memberName) {
+		this.memberName = memberName;
+	}
+	public int getEmployeeId() {
+		return employeeId;
+	}
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
+	
+	
+	
+}

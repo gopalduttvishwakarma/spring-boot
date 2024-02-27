@@ -1,0 +1,5 @@
+@PostMapping("/employee")
+	public Employee addEmployee(@RequestBody Employee employee) {
+		Employee emp = this.employeeService.addEmployee(employee);
+		return emp;
+	}

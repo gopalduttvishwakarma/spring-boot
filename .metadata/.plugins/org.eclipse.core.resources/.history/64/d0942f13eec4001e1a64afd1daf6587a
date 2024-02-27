@@ -1,0 +1,8 @@
+package com.gdv.user.services.utils;
+
+import java.util.List;
+
+public class ApiResponse {
+	private String message;
+	private List<Object> data;
+}

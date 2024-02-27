@@ -1,0 +1,14 @@
+package com.gdv.user.services.exceptions;
+
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+@RestControllerAdvice
+public class ExceptionsHandler extends RuntimeException{
+	public ExceptionsHandler() {
+		super("Exception occured");
+	}
+	
+	public ExceptionsHandler(String message) {
+		super(message);
+	}
+}

@@ -1,0 +1,15 @@
+package com.gdv.user.services.dao;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.gdv.user.services.entities.User;
+
+@Service
+public interface UserService {
+	public User addUser(User user);
+	public User getUser(int userId);
+	public List<User> getAllUser();
+	public void deleteUser(int userId);
+}

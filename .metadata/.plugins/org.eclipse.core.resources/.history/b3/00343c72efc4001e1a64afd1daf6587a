@@ -1,0 +1,32 @@
+package com.gdv.user.services.impl;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.gdv.user.services.dao.UserService;
+import com.gdv.user.services.entities.User;
+import com.gdv.user.services.repositories.UserRepository;
+
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	UserRepository repository;
+
+	@Override
+	public User addUser(User user) {
+		return repository.save(user);
+	}
+
+	@Override
+	public Optional<User> getUser(int userId) {
+		return repository.findById(userId);
+	}
+
+	@Override
+	public List<User> getAllUser() {
+		return repository.findAll();
+	}
+
+}

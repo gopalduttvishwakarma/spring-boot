@@ -1,0 +1,5 @@
+package com.gdv.user.services.impl;
+
+public class UserServiceImpl {
+
+}

@@ -1,0 +1,23 @@
+server:
+  port: 8083
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: HOTEL-SERVICE
+  data:
+    mongodb:
+#      authentication-database: admin
+#      username: root
+#      password: root
+      database: hotel
+      port: 27017
+      host: localhost
+

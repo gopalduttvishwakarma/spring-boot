@@ -1,0 +1,5 @@
+package com.tokenExample.auth;
+
+public class Authentication {
+
+}

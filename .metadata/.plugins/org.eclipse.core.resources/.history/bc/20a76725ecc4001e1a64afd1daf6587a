@@ -1,0 +1,5 @@
+package com.gdv.user.services.dao;
+
+public interface UserService {
+
+}

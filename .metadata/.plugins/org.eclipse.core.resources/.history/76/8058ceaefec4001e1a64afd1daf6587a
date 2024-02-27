@@ -1,0 +1,14 @@
+package com.gdv.user.services.exceptions;
+
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+@RestControllerAdvice
+public class DataNotFoundException extends RuntimeException{
+	public DataNotFoundException() {
+		super("Exception occured");
+	}
+	
+	public DataNotFoundException(String message) {
+		super(message);
+	}
+}

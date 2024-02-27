@@ -1,0 +1,5 @@
+package com.gdv.user.services.exceptions;
+
+public class ExceptionsHandler {
+
+}
